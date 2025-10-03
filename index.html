@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Recipe page</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --White: hsl(0, 0%, 100%);
+      --Stone-100: hsl(30, 54%, 90%);
+      --Stone-150: hsl(30, 18%, 87%);
+      --Stone-600: hsl(30, 10%, 34%);
+      --Stone-900: hsl(24, 5%, 18%);
+      --Brown-800: hsl(14, 45%, 36%);
+      --Rose-800: hsl(332, 51%, 32%);
+      --Rose-50: hsl(330, 100%, 98%);
+    }
+
+    body {
+      font-family: 'Young Serif', sans-serif;
+      background-color: var(--Stone-100);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 0;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      padding: 30px 0;
+    }
+
+    .page {
+      width: 50%;
+      background-color: var(--White);
+      border-radius: 15px;
+      margin: 0 auto;
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .page img {
+      width: 100%;
+      display: block;
+      margin: auto;
+      border-radius: 15px;
+    }
+
+    .title h1 {
+      color: var(--Stone-900);
+      margin: 30px auto;
+    }
+
+    p {
+      color: var(--Stone-600);
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .prepration_sec {
+      background-color: hsla(332, 51%, 32%, 0.24);
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    .prepration_sec h2 {
+      color: var(--Rose-800);
+      font-size: 22px;
+    }
+
+    ul,
+    ol {
+      list-style-position: outside;
+      padding-left: 20px;
+      margin-top: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      padding-left: 40px;
+      text-indent: -25px;
+      color: var(--Stone-600);
+    }
+
+    .prepration_sec ul li::marker {
+      color: var(--Rose-800);
+    }
+
+    .prepration_sec ul li b {
+      font-weight: 900;
+    }
+
+    .sub-title {
+      margin: 20px auto;
+      color: var(--Brown-800);
+      text-transform: capitalize;
+    }
+
+
+
+    .sub-title+ul li::marker,
+    .sub-title+ol li::marker {
+      color: var(--Brown-800);
+    }
+
+    hr {
+      margin: 30px auto;
+      width: 100%;
+      opacity: 0.5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    tr:not(:last-child) {
+      border-bottom: 1px solid #55555541;
+    }
+
+    table td:first-of-type {
+      color: var(--Stone-600);
+    }
+
+    table td:last-of-type {
+      color: var(--Brown-800);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .container {
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+        padding-bottom: 20px;
+      }
+
+      .page img {
+        width: calc(100% + 40px);
+        height: auto;
+        margin: 0 -20px;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="container">
+      <img src="assets/images/image-omelette.jpeg" alt="">
+      <div class="title">
+        <h1>Simple Omelette Recipe</h1>
+        <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
+          to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+      </div>
+      <div class="prepration_sec">
+        <h2>Preparation time</h2>
+        <ul>
+          <li><b>Total:</b> Approximately 10 minutes</li>
+          <li><b>Preparation: </b>5 minutes</li>
+          <li><b>Cooking:</b> 5 minutes</li>
+        </ul>
+      </div>
+      <h2 class="sub-title">Ingredients</h2>
+      <ul>
+        <li> 2-3 large eggs</li>
+        <li>Salt, to taste</li>
+        <li>Pepper, to taste</li>
+        <li>1 tablespoon of butter or oil</li>
+        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      </ul>
+      <hr>
+      <h2 class="sub-title">Instructions</h2>
+      <ol>
+        <li><b>Beat the eggs:</b> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed.You
+          can
+          add a tablespoon of water or milk for a fluffier texture.</li>
+        <li>Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.</li>
+
+        <li><b>Cook the omelette:</b> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure
+          the eggs evenly coat the surface.</li>
+
+        <li><b>Add fillings (optional):</b> When the eggs begin to set at the edges but are still slightly runny in the
+          middle, sprinkle your chosen fillings over one half of the omelette.</li>
+
+        <li><b>Fold and serve:</b> As the omelette continues to cook, carefully lift one edge and fold it over the
+          fillings. Let it cook for another minute, then slide it onto a plate.</li>
+
+        <li><b>Enjoy:</b> Serve hot, with additional salt and pepper if needed.</li>
+      </ol>
+      <hr>
+      <h2 class="sub-title">Nutrition</h2>
+      <p> The table below shows nutritional values per serving without the additional fillings.
+      </p>
+      <table>
+        <tr>
+          <td>calories</td>
+          <td>277Kcal</td>
+        </tr>
+        <tr>
+          <td>carbs</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>protein</td>
+          <td>20g</td>
+        </tr>
+        <tr>
+          <td>fat</td>
+          <td>22g</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
